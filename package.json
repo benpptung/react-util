@@ -1,14 +1,23 @@
 {
   "name": "react-util",
-  "version": "0.1.0",
   "description": "react utilties",
+  "version": "0.1.0",
   "author": "Ben P.P. Tung",
-  "license": "UNLICENSED",
+  "browserify": {
+    "transform": [
+      "transforms",
+      "envify"
+    ]
+  },
+  "dependencies": {
+    "envify": "^4.0.0"
+  },
+  "license": "MIT",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://repo.tacol.biz/browser-lib/react-util.git"
   },
-  "main": "index.js",
   "scripts": {
     "test": "mocha test"
   }
