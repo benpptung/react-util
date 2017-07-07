@@ -10,7 +10,8 @@
     ]
   },
   "dependencies": {
-    "envify": "^4.0.0"
+    "envify": "^4.0.0",
+    "transforms": "^0.1.4"
   },
   "license": "MIT",
   "main": "index.js",
