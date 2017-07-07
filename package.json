@@ -1,0 +1,15 @@
+{
+  "name": "react-util",
+  "version": "0.1.0",
+  "description": "react utilties",
+  "author": "Ben P.P. Tung",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://repo.tacol.biz/browser-lib/react-util.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  }
+}
