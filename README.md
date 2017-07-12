@@ -8,18 +8,37 @@ detect string is email or not
 
 detect current view size: {width, height}
 
-## bindViewSize({ReactComponent})
+## bindResize({ReactComponent})
 
-Should be called in `ReactComponent constructor`.
+### add viewsize.{width, height} to `state` in constructor.
 
-- add view size {width, height} to `state` in constructor.
+So, you can know current window width or height like following:
 
-  - this.state.viewsize.width
-  - this.state.viewsize.height
+```
+var winWidth = this.state.viewsize.width;
+
+```
+
+- listen to window `resize` event. and update this.state automatically. At least `20` ms between each update.
+
+## Usage
+
+In a React Component. (Class also works, but I dislike class syntax, which is a stupid idea by business guys to earn money only. )
+```
+const React = require('react');
+const inherits = require('inherits');
+const util = require('react-util');
+
+inherits(MyComponent, React);
+module.exports = MyComponent;
+var prototype = MyComponent.protoype;
 
 
-- listen to window `resize` event. and update this.state automatically, so component can render component based on new `viewsize`.
+function MyComponent(props) {
+  React.Component.call(this, props);
 
-- At least `20` ms between each update. 
+  util.bindResize(this);
+}
 
-- Avoid memory leak: bind listener in `componentDidMount`, and remove listener in `componentWillUnmount`.
+
+```
