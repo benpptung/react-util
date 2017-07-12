@@ -8,7 +8,7 @@ detect string is email or not
 
 detect current view size: {width, height}
 
-## bindResize({ReactComponent})
+## bindResize(thisArg)
 
 - add viewsize.{width, height} to `state` in constructor.
 
