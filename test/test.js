@@ -1,7 +1,7 @@
 'use strict';
 
 const inherits = require('inherits');
-const lookup = require('../lib/viewsize').lookup;
+const lookup = require('../lib/viewsize').lookupMethod;
 
 function Father() {
   this.lastname = 'Tung';
